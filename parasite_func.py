@@ -56,7 +56,7 @@ def multi_parasite_axes(x, data, total):
         # ax_list[i].set_yticks(np.round(np.linspace(100 * min_level/total[i], 100, 5)))
         y_ticks = [100 * (min_level-0.5) / total[i]]
         for j in np.linspace(0, 100, 11):
-            if j > y_ticks[0] + 5:
+            if (j > y_ticks[0] + 5) and (j < 100 * (max_level+0.5)/total[i]):
                 y_ticks.append(j)
         ax_list[i].set_yticks(np.round(np.array(y_ticks)))
 
@@ -77,4 +77,4 @@ if __name__ == '__main__':
     arr_2 = list(rand_data[:][2] * 3 + 4)
     arr_3 = list(rand_data[:][3] * 5 + 4)
     rpms = np.linspace(1600, 2500, len(arr_0))
-    multi_parasite_axes(x=rpms, data=[arr_0, arr_1, arr_2, arr_3], total=[5, 6, 7, 9])
+    multi_parasite_axes(x=rpms, data=[arr_0, arr_1, arr_2, arr_3], total=[10, 10, 10, 20])
