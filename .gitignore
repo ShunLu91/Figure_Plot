@@ -89,3 +89,4 @@ fabric.properties
 *.tar
 /.idea/codeStyles/codeStyleConfig.xml
 
+/main.py
