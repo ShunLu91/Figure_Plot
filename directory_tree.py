@@ -28,6 +28,7 @@ tree.heading("three", text="Part Number")
 # 1th level
 id0 = tree.insert("", 0, "dir0", text="Pivot Bearing with Wheel Hub-101BG/001",
                   values=("Pivot Bearing Assembly with Wheel Bearing",))
+
 # 2th level
 id00 = tree.insert(id0, "end", "dir00", text="Pivot Bearing Assembly with Bushs 101TJ/001",
                    values=("Pivot Bearing Assembly with Bushs",))
@@ -64,6 +65,8 @@ id0012 = tree.insert(id001, "end", "dir0012", text="102XDE/005_100",
 # 5th level
 id00000 = tree.insert(id0000, "end", "dir00000", text="102TYH/001_100",
                       values=('Pivot Bearing (Radial, left)', 'Pivot Bearing', '123.456.789.A'))
+
+# tree.grid(row=0,column=0,sticky=NSEW)
 tree.pack()
 
 # root loop
